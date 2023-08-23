@@ -52,11 +52,6 @@ char *parsesetsvar(char *buf)
     return (newbuf);
 }
 
-/**
- * subsvars - substitutes in svars for $names
- * @buf: buffer string that was input
- * Return: processed buffer string
- */
 char *subsvars(char **buf)
 {
     char *varptr = *buf, *ptr, *name, *val, *valptr, *dest, *dolptr;
