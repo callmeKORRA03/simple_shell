@@ -33,7 +33,6 @@ char *parsesetsvar(char *buf)
             if (*ptr == ' ' || *ptr == 0)
             {
                 buf = _strdup(buf);
-                /* do malloc fail test */
                 free(bufstart);
                 return (buf);
             }
