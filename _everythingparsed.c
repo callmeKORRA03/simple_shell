@@ -63,7 +63,6 @@ char *subsvars(char **buf)
     {
         while (*varptr != '$' && *varptr != 0)
         {
-            /*			printf("inquotes:%d:varptr:%s\n", inquotes, varptr);*/
             if (*varptr == '\\')
             {
                 varptr++;
@@ -259,7 +258,6 @@ char *tildeexpand(char *buf)
         tildeptr = buf;
         while (*tildeptr != '~' && *tildeptr != 0)
         {
-            /*			printf("Finding ~:%s\n", tildeptr);*/
             if (*tildeptr == '\\')
             {
                 tildeptr++;
@@ -355,7 +353,6 @@ int parseargs(char **buf)
     right = strtokqe(NULL, "", 7);
     if (right != NULL && *right == '&')
     {
-        /* need to check malloc fails here */
         left = _strdup(left);
         right = _strdup(right);
         free(*buf);
